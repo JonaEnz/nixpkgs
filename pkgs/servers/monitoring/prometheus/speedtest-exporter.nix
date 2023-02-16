@@ -4,20 +4,20 @@ let
   version = "0.3.2";
 
   src = fetchFromGitHub {
-      owner = "nlamirault";
+      owner = "JonaEnz";
       repo = "speedtest_exporter";
-      rev = "7364db62b98ab2736405c7cde960698ab5b688bf";
-      sha256 = "WIMDv63sHyZVw3Ct5LFXCIufj7sU2H81n+hT/NiPMeQ=";
+      rev = "82c7b75fa99d2a6488edfd2ccfd1b67f564c1536";
+      sha256 = "0RxEiA3HReCss8+/4vWAyQyONAlSomTuqTApxTWxGNY=";
     };
 
 in buildGoModule rec {
   inherit pname version src;
 
-  vendorSha256 = "Lm73pZzdNZv7J+vKrtQXxm4HiAuB9lugKT/oanmD0HM=";
+  vendorSha256 = "GvXzt4/QjBdCJkmzFaKQMPW/++zTrEZ/O5NM4kISIJU=";
 
   meta = with lib; {
       license = licenses.asl20;
-      homepage = "https://github.com/nlamirault/speedtest_exporter";
+      homepage = "https://github.com/JonaEnz/speedtest_exporter";
       description = "Prometheus exporter for Speedtest metrics";
       maintainers = with maintainers; [ jonaenz ];
       platforms = platforms.unix;
